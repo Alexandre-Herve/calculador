@@ -1,1 +1,16 @@
 /* This file is for your main application css. */
+
+.digit {
+  width: 30px;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid cyan;
+  padding: 0;
+}
+
+.digit.operator {
+  border: 1px solid orange;
+}

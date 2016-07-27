@@ -1,36 +1,33 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
+<table>
+  <tr>
+    <td><button class="digit" data-value=1>1</button></td>
+    <td><button class="digit" data-value=2>2</button></td>
+    <td><button class="digit" data-value=3>3</button></td>
+    <td><button class="operator digit" data-value="+">+</button></td>
+    <td><button class="operator digit" data-value="(">(</button></td>
+  </tr>
+  <tr>
+    <td><button class="digit" data-value=4>4</button></td>
+    <td><button class="digit" data-value=5>5</button></td>
+    <td><button class="digit" data-value=6>6</button></td>
+    <td><button class="operator digit" data-value="-">-</button></td>
+    <td><button class="operator digit" data-value=")">)</button></td>
+  </tr>
+  <tr>
+    <td><button class="digit" data-value=7>7</button></td>
+    <td><button class="digit" data-value=8>8</button></td>
+    <td><button class="digit" data-value=9>9</button></td>
+    <td><button class="operator digit" data-value="*">*</button></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><button class="digit" data-value=0>0</button></td>
+    <td><button class="operator digit" data-value="=">=</button></td>
+    <td></td>
+  </tr>
+</table>
+<hr/>
+<div id="calc"></div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
-  </div>
-</div>

@@ -9,7 +9,7 @@ defmodule Calculador.SessionController do
     case Calculador.Session.login(session_params, Calculador.Repo) do
       {:ok, user} ->
         conn
-        |> put_session(:current_user, user.id)
+        |> put_session(:current_user_id, user.id)
         |> put_flash(:info, "Logged In")
         |> redirect(to: "/")
       _ ->
@@ -21,7 +21,7 @@ defmodule Calculador.SessionController do
 
   def delete(conn, _) do
     conn
-    |> delete_session(:current_user)
+    |> delete_session(:current_user_id)
     |> put_flash(:info, "Logged out")
     |> redirect(to: "/")
   end

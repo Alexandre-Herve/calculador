@@ -1,6 +1,5 @@
 defmodule Calculador.Registration do
   import Ecto.Changeset, only: [put_change: 3]
-  import Comeonin
 
   def create(changeset, repo) do
     changeset

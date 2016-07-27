@@ -54,7 +54,22 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 socket.connect()
 
 // Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("topic:subtopic", {})
+let channel = socket.channel("room:calculador", {})
+let digits = $('.digit');
+let result = $('#calc');
+
+digits.on('click', (e) => {
+  const text = result.text() === '0' ? '' : (result.text() || '');
+  const newText = e.target.getAttribute('data-value');
+  const cumulatedText = text + newText;
+
+  channel.push("new_msg", { body: cumulatedText });
+});
+
+channel.on("new_msg", payload => {
+  result.html(payload.body);
+});
+
 channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
